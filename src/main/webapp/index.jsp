@@ -18,11 +18,14 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<!-- 	 <form  action="" style="margin:auto;max-width:300px">  </form> -->
+	
 	<header>
 	<div class="topnav" id="myTopnav">
-		<a href="#home" class="active">Home</a> <a
-			href="/get-hotel-list">Hotel List</a> <a href="/booking">About</a>
+		<a href="#home" class="active">Home</a> 
+		<a href="/get-hotel-list">Hotel List</a> 
+		<a href="/booking">About</a>
+		<a href="/registration">Register</a>
+			
 		<%if(session.getAttribute("userRole") != null && session.getAttribute("userRole").equals("ADMIN_ROLE")){ %>
 			<a href="${pageContext.request.contextPath}/hotel">AddHotel</a>
 		<%} %>

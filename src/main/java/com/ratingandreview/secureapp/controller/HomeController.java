@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ratingandreview.secureapp.models.Hotel;
-import com.ratingandreview.secureapp.service.HotelService;
+import com.ratingandreview.secureapp.service.IHotelService;
 
 
 
@@ -17,7 +17,7 @@ import com.ratingandreview.secureapp.service.HotelService;
 public class HomeController {
 	
 	@Autowired
-	private HotelService hotelService;
+	private IHotelService hotelService;
 
 	@RequestMapping("/")
 	public String home()  {
@@ -46,6 +46,11 @@ public class HomeController {
 		
 		return "signup.jsp";
 		
+	}
+	
+	@RequestMapping("/set-password")
+	public String setPasswordPage() {
+		return "setPassword";
 	}
 	
 	@RequestMapping(value="/get-hotel-list", method = RequestMethod.GET)

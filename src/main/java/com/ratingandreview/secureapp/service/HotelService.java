@@ -9,12 +9,22 @@ import com.ratingandreview.secureapp.models.Hotel;
 import com.ratingandreview.secureapp.repository.HotelRepository;
 
 @Service
-public class HotelService {
+public class HotelService implements IHotelService {
 
 	@Autowired
 	private HotelRepository hotelRepository;
-	
+
+	@Override
 	public List<Hotel> getHotelList() {
 		return hotelRepository.getHotelList();
 	}
+
+	@Override
+	public Hotel getHotelDetails(int hotelId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
 }
